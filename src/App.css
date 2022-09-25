@@ -1,0 +1,58 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+@media screen and (min-width: 720px) {
+    .drum-machine {
+        padding: 2rem;
+        border: 2px solid var(--fg-color);
+        border-radius: 4px;
+        max-width: 330px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .drum-machine {
+        min-width: 330px;
+    }
+}
+
+.drum-machine--display {
+    color: var(--fg-color-accent);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    height: 3rem;
+    margin-bottom: 7.75rem;
+}
+
+.drum-machine--pad-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem; 
+}
+
+.drum-pad {
+    color: var(--fg-color);
+    font-family: Inter;
+    font-size: 1.375rem;
+    line-height: 1;
+    font-weight: 500;
+
+    width: 68px;
+    height: 54px;
+    border: 2px solid var(--fg-color);
+    border-radius: 4px;
+    filter: drop-shadow(2px 2px 0px var(--fg-color));
+}
+
+.drum-pad:active, .drum-pad:focus, .drum-pad:target {
+    color: var(--fg-color-accent);
+    border-color: var(--fg-color-accent);
+    filter: drop-shadow(2px 2px 0px var(--fg-color-accent));
+}
